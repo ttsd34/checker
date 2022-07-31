@@ -73,5 +73,8 @@ function input() {
     date = dateinput.value
     var selectdate = new Date(fullyear, month, date);
     day = selectdate.getDay()
+    for (var i = 1; i <= 6; i++) {
+        document.getElementById(( i ) + "r").style.display = "none"
+    }
     dis();
 }
