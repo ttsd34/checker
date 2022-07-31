@@ -5,8 +5,8 @@ var deta = [
     [{}, {}, {}]
 ];
 var fullyear = new Date().getFullYear();
-var month = new Date().getMonth() + 3;
-var date = new Date().getDate() - 5;
+var month = new Date().getMonth();
+var date = new Date().getDate();
 var day = new Date().getDay();
 var year = fullyear % 10;
 var check = 0;
