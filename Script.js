@@ -43,10 +43,15 @@ function dis() {
     }
     function loop() {
         check = 0
+        if (aday === undefined) {
+            var goal = 9;
+        } else {
+            var goal = goallist [aday];
+        }
         for (var i = 1; i <= 12; i++) {
             check += document.getElementById("check" + i).checked
         }
-        if (check === goallist [aday]) {
+        if (check === goal) {
             document.getElementById("warn").style.display = "none"
         } else {
             setTimeout(loop, 50)
