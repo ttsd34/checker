@@ -108,7 +108,7 @@ classlist [7] = [
     "生物",
     "国語a"
 ]
-deta [2][7].schedule = []
+deta [2][6].schedule = []
 deta [2][7].schedule [9] = "M 広島 => 東京"
 deta [2][7].schedule [12] = "T&K 広島 => 東京"
 deta [2][7].schedule [18] = "T&M&K 東京 => 広島"
