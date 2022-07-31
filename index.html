@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Checker</title>
+    <script src="Script.js"></script>
+    <script src="Set.js"></script>
+	<style>
+		.timetable th {
+			border:  2px #000000 solid;
+			padding: 5px 15px;
+			text-align: center;
+			font-size: 20px;
+		}
+		.timetable td {
+			border:  2px #000000 solid;
+			width: 100px;
+			padding: 5px 50px;
+			text-align: center;
+			font-size: 20px;
+		}
+		.timetable tr {
+			display: none;
+		}
+		table p {
+			margin: 0px;
+			font-size: 20px;
+		}
+		.non-daily tr {
+			display: none;
+		}
+		.checklist {
+			padding: 1px 30px;
+		}
+	</style>
+</head>
+<body onload="set(); dis();">
+	<div id="timedis" style="text-align: center; margin-top: 45px;">
+		<span style="font-size: 36px;" id="year"></span>
+		<span style="font-size: 48px;" id="main"></span>
+		<span style="font-size: 36px;" id="day"></span>
+	</div>
+	<p id="schedule" style="margin-top: 30px; margin-bottom: 20px; font-size: 28px; text-align: center;"></p>
+	<table id="timetable" style="margin: auto;" class="timetable">
+		<tbody>
+			<tr id="1r">
+				<th>1</th>
+				<td id="1class"></td>
+			</tr>
+			<tr id="2r">
+				<th>2</th>
+				<td id="2class"></td>
+			</tr>
+			<tr id="3r">
+				<th>3</th>
+				<td id="3class"></td>
+			</tr>
+			<tr id="4r">
+				<th>4</th>
+				<td id="4class"></td>
+			</tr>
+			<tr id="5r">
+				<th>5</th>
+					<td id="5class"></td>
+			</tr>
+			<tr id="6r">
+				<th>6</th>
+				<td id="6class"></td>
+			</tr>
+		</tbody>
+	</table>
+	<p style="font-size: 28px; display: none; text-align: center;" id="non-class">今日は授業はありません</p>
+	<div id="space" style="height: 30px;"></div>
+	<table style="margin: auto;">
+		<tbody>
+			<tr>
+				<td class="checklist">
+					<table>
+						<tbody>
+							<tr>
+								<td>
+									<input type="checkbox" id="check1">
+								</td>
+								<td>
+									<p>PC</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="check2">
+								</td>
+								<td>
+									<p>スマホ</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="check3">
+								</td>
+								<td>
+									<p>メガネ</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="check4">
+								</td>
+								<td>
+									<p>マスク</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="check5">
+								</td>
+								<td>
+									<p>ハンカチ･ティッシュ</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="check6">
+								</td>
+								<td>
+									<p>財布orICOCA</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="check7">
+								</td>
+								<td>
+									<p>水筒</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="check8">
+								</td>
+								<td>
+									<p>弁当</p>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<input type="checkbox" id="check9">
+								</td>
+								<td>
+									<p>明日のために</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+				<td class="checklist">
+					<table class="non-daily">
+						<tbody>
+							<tr id="care">
+								<td>
+									<input type="checkbox" id="check10">
+								</td>
+								<td>
+									<p>習字道具</p>
+								</td>
+							</tr>
+							<tr id="smog">
+								<td>
+									<input type="checkbox" id="check11">
+								</td>
+								<td>
+									<p>スモッグ</p>
+								</td>
+							</tr>
+							<tr id="gym-suit">
+								<td>
+									<input type="checkbox" id="check12">
+								</td>
+								<td>
+									<p>体操服or水泳道具</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<p style="background-color: #FF0; text-align: center; padding: 30px; font-size: 24px;" id="warn">まだ全てのものが揃っていません。</p>
+</body>
+</html>
