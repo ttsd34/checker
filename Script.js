@@ -84,6 +84,7 @@ function input() {
     for (var i = 1; i <= 12; i++) {
         document.getElementById("check" + i).checked = false
     }
+    document.getElementById("warn").style.display = "block"
     document.getElementById("care").style.display = "none"
     document.getElementById("smog").style.display = "none"
     document.getElementById("gym-suit").style.display = "none"
